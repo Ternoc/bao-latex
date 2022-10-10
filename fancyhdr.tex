@@ -1,0 +1,39 @@
+\documentclass[twoside, a4paper, titlepage]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{fancyhdr}
+\usepackage{extramarks}
+\usepackage[fit]{truncate}
+\usepackage[french]{babel}
+
+\counterwithin{equation}{section} %on ajoute le numéro de section devant le numéro d'équation
+
+
+\pagestyle{fancy}
+\fancyhead[LE, RO]{Ternoc}
+\fancyhead[C]{TP 3}
+\fancyhead[RE, LO]{\truncate{0.45\headwidth}{\firstleftmark}}
+\fancyfoot[RE, LO]{Licence 3 de Physique \\
+Matière \\ 
+Monsieur machin}
+\fancyfoot[C]{Université de Bordeaux \\ 
+UF Physique Talence \\
+physique.u-bordeaux.fr}
+\fancyfoot[LE, RO]{\thepage}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt} 
+
+\title{Test \no 2 : fancyhdr}
+\author{Ternoc}
+\date{10 octobre 2022}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+   \section{Rappels théoriques}
+      \subsection{Diffractions}
+         Bonjour
+\end{document}
