@@ -7,49 +7,7 @@
 \usepackage[french]{babel}
 \usepackage[listings,theorems,most]{tcolorbox}
 
-\newtcolorbox[use counter=equation]{equationEncadree}[1][]{colback=blue!5!white,
-   colframe=blue!75!black,
-   fonttitle=\bfseries, 
-   title=Équation importante~\theequation~,
-   #1}
-
-\counterwithin{equation}{section} %on ajoute le numéro de section devant le numéro d'équation
-
-\newtcolorbox[blend into=figures]{customFig}[2][]{float=hbtp,
-    blend before title=colon hang,
-    colframe=yellow!75!black,
-    colback=yellow!5!white,
-    fonttitle=\bfseries,
-    title= {#2},
-    every float=\centering,
-    halign=flush center,
-    halign lower=flush center,
-    lower separated=false,
-    #1}
-
-\counterwithin{figure}{section}
-
-\newtcolorbox[auto counter,
-   number within=section,
-   crefname={résultat}{résultats},
-   Crefname={Résultat}{Résultats}]
-   {resultat}[2][]
-   {colback=red!5!white, 
-   colframe=red!75!black,
-   fonttitle=\bfseries, 
-   title=Résultat~\thetcbcounter~:~{#2},
-   #1}
-
-\newtcolorbox[auto counter,
-      number within=section,
-      crefname={théroème}{théroèmes},
-      Crefname={Théroème}{Théroèmes}]
-   {theoremCustom}[2][]
-   {colback=green!5!white, 
-      colframe=green!75!black,
-      fonttitle=\bfseries, 
-      title=Théorème~\thetcbcounter~:~{#2},
-      #1}
+\input{colorboxes.def.tex}
 
 \title{Boîte à outils pour des rapports LaTeX}
 \author{Ternoc}
