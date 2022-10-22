@@ -1,0 +1,36 @@
+% Définitions des couleurs de la numérotation des titres
+% Titre
+\definecolor{couleurTitre}{HTML}{cc0000}
+% Article
+\definecolor{couleurArticle}{HTML}{16537e}
+% Section
+\definecolor{couleurSection}{HTML}{6aa84f}
+
+% Redéfinition de l'affichage du titre de section = titre
+\titleformat{\section}{\normalfont\Huge\bfseries}{\color{couleurTitre} TITRE \thesection}{1em}{}
+% Numérotation des sections en chiffres romains
+\renewcommand\thesection{\Roman{section}}
+
+% Redéfinition de l'affichage du titre de sous-section = article
+\titleformat{\subsection}{\normalfont\huge\bfseries}{\color{couleurArticle} Article \arabic{subsection}}{1em}{}
+
+% Redéfinition de l'affichage du titre de sous-sous-section = Section
+\titleformat{\subsubsection}{\normalfont\large\bfseries}{\color{couleurSection} Section \thesubsubsection}{1em}{}
+% Décalage du titre vers la droite + marge au dessus
+\titlespacing{\subsubsection}{8pt}{5pt}{0pt}
+% Numérotation des sous-sous-sections en lettre associé avec le numéro de sous-section
+\renewcommand\thesubsubsection{\arabic{subsection}\Alph{subsubsection}}
+
+% Le numéro de sous-section n'est pas remis à 0 à chaque section
+\counterwithout{subsection}{section}
+
+% Pour l'affichage des références avec cref
+% Section = Titre
+\crefname{section}{titre}{titres}
+\Crefname{section}{Titres}{Titres}
+% Sous section = Article
+\crefname{subsection}{article}{articles}
+\Crefname{subsection}{Article}{Articles}
+% Sous-sous section = Section
+\crefname{subsubsection}{section}{Section}
+\Crefname{subsubsection}{Section}{Sections}

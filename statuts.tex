@@ -1,0 +1,35 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage[french]{cleveref}
+\usepackage[french]{babel}
+
+\input{statuts.def.tex}
+
+\title{Statuts de l'association X}
+\author{X}
+\date{\today}
+
+\begin{document}
+\maketitle
+\section{Principes généraux} \label{titre-principesg}
+    \subsection{Nom} \label{article-nom}
+        L'association dénommée X est constituée entre les adhérents aux présents statuts.
+
+    \subsection{Siège social}
+        Le siège social est fixé à Paris.
+
+\section{Adhérents}
+    \subsection{Adhésion}
+        L'adhésion à l'association...
+        \subsubsection{Radiation} \label{section-radiation}
+            On peut être radié...
+    \subsection{Cotisation}
+        Si \cref{section-radiation}
+        \subsubsection{Test}
+            Bonjour
+        \subsubsection{Test2}
+            Lpazs \cref{titre-principesg}
+\end{document}
