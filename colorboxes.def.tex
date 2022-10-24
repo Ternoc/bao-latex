@@ -1,7 +1,7 @@
 \newtcolorbox[use counter=equation]{equationEncadree}[1][]{colback=blue!5!white,
    colframe=blue!75!black,
    fonttitle=\bfseries, 
-   title=Équation importante~\theequation~,
+   title=Équation~\theequation~,
    #1}
 
 \counterwithin{equation}{section} %on ajoute le numéro de section devant le numéro d'équation
@@ -11,7 +11,7 @@
     colframe=yellow!75!black,
     colback=yellow!5!white,
     fonttitle=\bfseries,
-    title= {#2},
+    title=\textit{{#2}},
     every float=\centering,
     halign=flush center,
     halign lower=flush center,
@@ -28,7 +28,7 @@
    {colback=red!5!white, 
    colframe=red!75!black,
    fonttitle=\bfseries, 
-   title=Résultat~\thetcbcounter~:~{#2},
+   title=Résultat~\thetcbcounter~:~\textit{{#2}},
    #1}
 
 \newtcolorbox[auto counter,
@@ -39,5 +39,12 @@
    {colback=green!5!white, 
       colframe=green!75!black,
       fonttitle=\bfseries, 
-      title=Théorème~\thetcbcounter~:~{#2},
+      title=Théorème~\thetcbcounter~:~\textit{{#2}},
+      #1}
+
+\newtcolorbox{magentaBox}[2][]
+   {colback=magenta!5!white, 
+      colframe=magenta!75!black,
+      fonttitle=\bfseries, 
+      title=\textit{{#2}},
       #1}
